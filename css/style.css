@@ -317,6 +317,7 @@ button, input, select, textarea {
     font-size: var(--font-size-xxxl);
     margin-bottom: var(--spacing-lg);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
 }
 
 .hero-subtitle {
@@ -521,6 +522,7 @@ button, input, select, textarea {
 .footer-title {
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-sm);
+    color: var(--color-white);
 }
 
 .footer-address, .footer-contact {
@@ -1599,13 +1601,16 @@ button, input, select, textarea {
 }
 
 .ceo-image-container {
-    flex: 0 0 200px;
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
 }
 
 .ceo-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -1853,10 +1858,26 @@ button, input, select, textarea {
 
 /* ===== お知らせセクション文字色とレイアウト ===== */
 .news-section,
-.news-section h2,
 .news-section p,
 .news-section li {
     color: #000;
+}
+
+/* お知らせセクション見出しをメインカラーに */
+.news-section h2 {
+    color: #0055A4;
+}
+
+/* ニュースタイトルを小さめに調整 */
+.news-content h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: 8px;
+}
+
+/* サービス・施工事例カードタイトルを中央揃え */
+.service-title,
+.work-title {
+    text-align: center;
 }
 
 /* お知らせ一覧の横並びかつ行ごとに線 */
