@@ -96,9 +96,24 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-heading);
-    line-height: var(--line-height-heading);
-    margin-bottom: var(--spacing-md);
     font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 1.4;
 }
 
 p {
@@ -1385,6 +1400,19 @@ button, input, select, textarea {
   .section-title {
     font-size: var(--font-size-base);
     margin-bottom: 15px;
+  }
+  
+  /* 見出しフォントサイズモバイル調整 (80%) */
+  h1 {
+    font-size: 38px; /* 48px * 0.8 */
+  }
+  
+  h2 {
+    font-size: 29px; /* 36px * 0.8 */
+  }
+  
+  h3 {
+    font-size: 22px; /* 28px * 0.8 */
   }
   
   /* 経営理念のレスポンシブ対応 */
