@@ -1067,6 +1067,59 @@ button, input, select, textarea {
   border-radius: var(--border-radius);
 }
 
+/* ===== スクロールアニメーション ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== サービスページ - 施工実績紹介セクション ===== */
+.service-img {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 10px;
+}
+
+.service-detail-content {
+    gap: var(--spacing-md);
+}
+
+.service-detail-image {
+    flex: 0 0 55%;
+}
+
+/* ===== ページタイトルセクション ===== */
+.page-title-section {
+    padding: 40px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin: 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .page-title-section {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+}
+
 /* ===== 会社概要ページ ===== */
 .company-content {
     display: flex;
@@ -1534,6 +1587,551 @@ button, input, select, textarea {
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* ===== フッターメニュー内「結城興業」の文字色 ===== */
+.footer-title {
+    color: var(--color-white);
+}
+
+/* ===== サービスページスタイル ===== */
+/* 共通セクションスタイル */
+.section {
+  padding: 60px 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.4;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28.8px; /* 36px * 0.8 */
+  }
+}
+
+.section-lead {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+/* ページヘッダー */
+.page-header {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  margin-bottom: 0;
+}
+
+.page-title {
+  font-size: 48px;
+  line-height: 1.4;
+  color: var(--color-primary);
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 38.4px; /* 48px * 0.8 */
+  }
+}
+
+/* サービス概要セクション */
+.services-overview-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-overview-item {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.service-overview-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  margin-bottom: 20px;
+}
+
+.service-icon-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.service-overview-title {
+  font-size: 28px;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .service-overview-title {
+    font-size: 22.4px; /* 28px * 0.8 */
+  }
+}
+
+.service-overview-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* サービス詳細セクション */
+.service-detail-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.service-detail-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-detail-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-detail-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail-text h3 {
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .service-detail-text h3 {
+    font-size: 19.2px; /* 24px * 0.8 */
+  }
+}
+
+.service-detail-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-case-link {
+  margin-top: 30px;
+}
+
+/* 施工の流れセクション */
+.flow-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.flow-step {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.flow-step:last-child {
+  margin-bottom: 0;
+}
+
+.flow-step:not(:last-child):after {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: 80px;
+  height: calc(100% - 40px);
+  width: 3px;
+  background-color: var(--color-accent);
+}
+
+.flow-icon {
+  position: relative;
+  flex: 0 0 70px;
+  height: 70px;
+  margin-right: 30px;
+}
+
+.flow-icon-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.flow-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--color-accent);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 3;
+}
+
+.flow-content {
+  flex: 1;
+}
+
+.flow-title {
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .flow-title {
+    font-size: 19.2px; /* 24px * 0.8 */
+  }
+  
+  .flow-step:not(:last-child):after {
+    left: 25px;
+    top: 60px;
+  }
+  
+  .flow-icon {
+    flex: 0 0 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .flow-icon-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .flow-number {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+}
+
+/* お問い合わせCTAセクション */
+.cta-section {
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  margin-bottom: 20px;
+}
+
+.btn-large {
+  padding: 15px 30px;
+  font-size: 18px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003d75; /* Darker shade of primary color */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-icon {
+  margin-right: 8px;
+}
+
+.cta-note {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* ===== サービスページ ===== */
+/* サービス一覧 */
+.service-list {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.service-list h1 {
+    margin-bottom: 40px;
+    color: var(--color-primary);
+}
+
+.service-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list .card {
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: 300px;
+    padding: 30px 20px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-list .card:hover {
+    transform: translateY(-5px);
+}
+
+.service-list .icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.service-list h2 {
+    margin: 0 0 15px;
+    font-size: 24px;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.service-list p {
+    margin: 0;
+    color: var(--color-text);
+}
+
+/* サービス詳細 */
+.service-detail {
+    padding: 60px 0;
+    background-color: var(--color-light-bg);
+}
+
+.service-detail .block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 60px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail .block:last-child {
+    margin-bottom: 0;
+}
+
+.service-detail img {
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.service-detail .text {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 30px;
+}
+
+.service-detail h3 {
+    margin: 0 0 20px;
+    color: var(--color-primary);
+}
+
+.service-detail ul {
+    margin: 0 0 30px;
+    padding-left: 20px;
+}
+
+.service-detail li {
+    margin-bottom: 10px;
+    color: var(--color-text);
+}
+
+.service-detail .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.service-detail .btn:hover {
+    background-color: var(--color-secondary);
+}
+
+/* 施工の流れ */
+.flow {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.flow h2 {
+    margin-bottom: 40px;
+    color: var(--color-primary);
+}
+
+.flow ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.flow .step {
+    flex: 0 0 calc(25% - 40px);
+    max-width: 200px;
+    padding: 20px;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    position: relative;
+}
+
+.flow .step:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: var(--color-primary);
+}
+
+/* お問い合わせCTA */
+.cta {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--color-light-bg);
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.cta p {
+    margin-bottom: 30px;
+    color: var(--color-text);
+}
+
+.cta .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: var(--color-secondary);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .service-list .card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .service-detail .block {
+        flex-direction: column;
+    }
+    
+    .service-detail img,
+    .service-detail .text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .flow .step {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .flow .step:not(:last-child)::after {
+        content: "↓";
+        position: absolute;
+        right: 50%;
+        top: auto;
+        bottom: -25px;
+        transform: translateX(50%);
+    }
 }
 
 /* ===== ヘッダーロゴテキスト色 ===== */
@@ -2039,10 +2637,333 @@ button, input, select, textarea {
         align-self: center;
     }
     
-    .breadcrumb {
-        padding: 5px 0;
-        margin-bottom: 10px;
+/* ===== サービスページスタイル ===== */
+
+/* サービス一覧概要 */
+.services-overview-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.service-overview-item {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-overview-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* サービスアイコン */
+.service-icon {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.service-icon h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.service-name {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.service-lead {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* サービス詳細 */
+.service-detail-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    align-items: center;
+}
+
+.service-detail-image {
+    flex: 0 0 45%;
+    order: -1;
+    min-width: 300px;
+}
+
+.service-detail-text {
+    flex: 1;
+    padding-left: var(--spacing-md);
+    min-width: 300px;
+}
+
+.service-detail-img, .service-img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.service-features h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+.service-features ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-features li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.service-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.service-case-link {
+    margin-top: var(--spacing-lg);
+}
+
+/* 施工の流れ */
+.flow-timeline {
+    margin-top: var(--spacing-lg);
+    position: relative;
+}
+
+.flow-step {
+    display: flex;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.flow-step:not(:last-child):after {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 80px;
+    height: calc(100% - 60px);
+    width: 2px;
+    background-color: var(--color-primary);
+}
+
+.flow-step:not(:last-child):before {
+    content: '↓';
+    position: absolute;
+    left: 36px;
+    bottom: 0;
+    color: var(--color-primary);
+    font-size: 24px;
+}
+
+.flow-icon {
+    flex: 0 0 100px;
+    position: relative;
+    text-align: center;
+}
+
+.flow-icon-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 50%;
+    padding: 10px;
+    background: rgba(0, 85, 164, 0.1);
+}
+
+.flow-number {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    line-height: 35px;
+    font-size: var(--font-size-md);
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 85, 164, 0.3);
+}
+
+.flow-content {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.flow-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.flow-text {
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* CTAセクション */
+.cta-section {
+    background-color: var(--color-bg-light);
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-text {
+    margin-bottom: var(--spacing-md);
+    font-size: 18px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.cta-note {
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+/* サービスページ特有のCTA */
+#service-cta .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: var(--font-size-lg);
+}
+
+#service-cta .cta-buttons {
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.btn-icon {
+    margin-right: 8px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .services-overview-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
     }
+    
+    .service-overview-item {
+        padding: var(--spacing-md);
+    }
+    
+    .service-icon-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .service-detail-content {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .service-detail-image {
+        flex: none;
+        order: 0;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .service-detail-text {
+        padding-left: 0;
+    }
+    
+    .flow-step {
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+    
+    .flow-icon {
+        flex: 0 0 80px;
+    }
+    
+    .flow-icon-img {
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+    }
+    
+    .flow-number {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: var(--font-size-sm);
+    }
+    
+    .flow-step:not(:last-child)::after {
+        left: 40px;
+        top: 100px;
+        font-size: 20px;
+    }
+    
+    .cta-section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .btn-large {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 24px;
+    }
+    
+    .cta-text {
+        font-size: var(--font-size-md);
+    }
+}
+
+.breadcrumb {
+    padding: 5px 0;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 576px) {
@@ -2058,5 +2979,192 @@ button, input, select, textarea {
         display: block;
         width: 100%;
         margin-bottom: var(--spacing-sm);
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* ===== サービスページ - 施工実績紹介セクション ===== */
+.service-detail-content {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    margin-bottom: var(--spacing-xl) !important;
+}
+
+.service-detail-image {
+    flex: 0 0 55% !important;
+    order: 2 !important; /* 画像を右側に */
+}
+
+.service-detail-text {
+    flex: 1 !important;
+    order: 1 !important; /* テキストを左側に */
+    margin-left: 30px !important; /* 画像とテキストの間隔を広げる */
+}
+
+.service-img,
+.service-detail-img {
+    width: 100% !important;
+    max-width: 700px !important;
+    margin: 0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* worksセクションの画像中央寄せ */
+.works-grid img {
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* ===== フッターリンク色 ===== */
+.footer-nav ul li a {
+    color: #CCCCCC;
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: var(--spacing-md) 0;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .menu li {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .menu li a {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    /* TOPページ - サービス・施工事例セクション縦並び */
+    .services-container,
+    .works-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+    
+    .service-overview-item,
+    .work-card {
+        width: 100% !important;
+        margin-bottom: var(--spacing-md) !important;
+    }
+    
+    /* サービスページのレスポンシブ対応 */
+    .service-detail-content {
+        flex-direction: column !important;
+    }
+    
+    .service-detail-image {
+        order: 1 !important; /* モバイル時は画像を上に */
+        margin-bottom: 20px !important;
+    }
+    
+    .service-detail-text {
+        order: 2 !important; /* モバイル時はテキストを下に */
+        margin-left: 0 !important;
+        margin-top: 20px !important;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-info {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .footer-sns {
+        margin-top: var(--spacing-sm);
+    }
+    
+    .sns-links {
+        justify-content: center;
+    }
+    
+    /* フッター - コピーライトを下に移動 */
+    .site-footer {
+        display: flex;
+        flex-direction: column-reverse !important;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .site-footer .container {
+        order: 1;
+    }
+    
+    .footer-nav {
+        width: 100%;
+        padding: 0 var(--spacing-sm);
+        background-color: var(--color-dark);
+        order: 1 !important;
+    }
+    
+    .footer-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin: var(--spacing-md) 0;
+        background-color: var(--color-dark);
+    }
+    
+    .footer-nav ul li {
+        margin: var(--spacing-xs);
+    }
+    
+    .copyright {
+        order: 2 !important;
+        margin-top: var(--spacing-md);
+        width: 100%;
+        text-align: center;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* フッター - リンク背景色統一 */
+    .footer-nav ul li a {
+        color: #CCCCCC !important;
+    }
+}
+
+@media (max-width: 600px) {
+    /* サービスページ - 施工実績紹介セクション レスポンシブ */
+    .service-img {
+        max-width: 100%;
+    }
+    
+    .service-detail-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .service-detail-image {
+        flex: none;
+        order: 1;
+    }
+    
+    .service-detail-text {
+        order: 2;
     }
 }
