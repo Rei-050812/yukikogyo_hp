@@ -1080,18 +1080,31 @@ button, input, select, textarea {
 }
 
 /* ===== サービスページ - 施工実績紹介セクション ===== */
-.service-img {
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 10px;
-}
-
 .service-detail-content {
-    gap: var(--spacing-md);
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    margin-bottom: var(--spacing-xl) !important;
 }
 
 .service-detail-image {
-    flex: 0 0 55%;
+    flex: 0 0 55% !important;
+    order: 2 !important; /* 画像を右側に */
+}
+
+.service-detail-text {
+    flex: 1 !important;
+    order: 1 !important; /* テキストを左側に */
+    margin-left: 30px !important; /* 画像とテキストの間隔を広げる */
+}
+
+.service-img,
+.service-detail-img {
+    width: 100% !important;
+    max-width: 700px !important;
+    margin: 0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
 }
 
 /* ===== ページタイトルセクション ===== */
@@ -2984,34 +2997,6 @@ button, input, select, textarea {
     .container {
         padding: 0 10px;
     }
-}
-
-/* ===== サービスページ - 施工実績紹介セクション ===== */
-.service-detail-content {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    margin-bottom: var(--spacing-xl) !important;
-}
-
-.service-detail-image {
-    flex: 0 0 55% !important;
-    order: 2 !important; /* 画像を右側に */
-}
-
-.service-detail-text {
-    flex: 1 !important;
-    order: 1 !important; /* テキストを左側に */
-    margin-left: 30px !important; /* 画像とテキストの間隔を広げる */
-}
-
-.service-img,
-.service-detail-img {
-    width: 100% !important;
-    max-width: 700px !important;
-    margin: 0 !important;
-    border-radius: 10px !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
 }
 
 /* worksセクションの画像中央寄せ */
