@@ -483,6 +483,196 @@ button, input, select, textarea {
     transform: translateX(-50%);
 }
 
+/* ===== 施工事例詳細ページ ===== */
+.work-main-image {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.work-details section {
+    margin-bottom: 60px;
+}
+
+.work-overview, .work-challenge, .work-process, .work-result, .client-voice, .related-works, .cta-section {
+    margin-bottom: 60px;
+    padding-top: 20px;
+}
+
+/* 関連施工事例カードのスタイル */
+.works-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* 施工概要テーブルのスタイル改善 */
+.company-info-table,
+.work-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.company-info-table th,
+.company-info-table td,
+.work-info-table th,
+.work-info-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.company-info-table th,
+.work-info-table th {
+    background-color: rgba(0, 85, 164, 0.05);
+    width: 25%;
+    text-align: left;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+}
+
+.company-info-table tr:hover,
+.work-info-table tr:hover {
+    background-color: rgba(0, 85, 164, 0.02);
+}
+
+.company-info-table tr:last-child th,
+.company-info-table tr:last-child td,
+.work-info-table tr:last-child th,
+.work-info-table tr:last-child td {
+    border-bottom: none;
+}
+
+.process-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.process-item {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    margin-bottom: 30px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.process-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.process-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    margin-bottom: 0;
+}
+
+.process-item figcaption {
+    padding: 15px;
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-700);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .process-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* 施工事例ナビゲーション - 横並び化 */
+.post-navigation .nav-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+    flex: 1;
+    max-width: 48%;
+}
+
+.post-navigation a {
+    display: block;
+    padding: 15px 20px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.post-navigation a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.post-navigation .nav-previous a::before,
+.post-navigation .nav-next a::after {
+    font-size: 24px;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.post-navigation .nav-previous a {
+    padding-left: 40px;
+}
+
+.post-navigation .nav-next a {
+    padding-right: 40px;
+}
+
+.post-navigation .nav-previous a::before {
+    content: '←';
+    left: 15px;
+}
+
+.post-navigation .nav-next a::after {
+    content: '→';
+    right: 15px;
+}
+
+@media (max-width: 768px) {
+    .post-navigation .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .post-navigation .nav-previous,
+    .post-navigation .nav-next {
+        max-width: 100%;
+    }
+}
+
 /* ===== フッター ===== */
 .site-footer {
     background-color: var(--color-gray-800);
@@ -604,6 +794,31 @@ button, input, select, textarea {
 .section {
     padding: 30px 10px;
     margin-bottom: 30px;
+}
+
+/* ===== ページタイトル ===== */
+.page-title-section {
+    background-color: rgba(0, 123, 255, 0.1);
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 36px;
+    color: var(--color-primary-dark);
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: 15px auto 0;
 }
 
 .section-title {
@@ -729,6 +944,67 @@ button, input, select, textarea {
     margin-bottom: var(--spacing-md);
 }
 
+.work-challenge, .work-result {
+    margin-bottom: var(--spacing-lg);
+}
+
+.work-challenge h3, .work-result h3, .section-subtitle {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+    color: var(--color-primary-dark);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.work-challenge h3::after, .work-result h3::after, .section-subtitle::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary);
+    margin: 10px auto 0;
+}
+
+.work-challenge p, .work-result p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+    line-height: 1.8;
+}
+
+.work-challenge ul, .work-result ul {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+.centered-text {
+    text-align: center;
+    list-style-position: outside;
+    padding-left: 0;
+    display: table;
+    margin: 0 auto;
+}
+
+.centered-text li {
+    text-align: left;
+    margin-left: 1.5em;
+}
+
+.work-challenge li, .work-result li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.result-highlight {
+    background-color: rgba(0, 85, 164, 0.05);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 30px 0;
+}
+
 /* ===== アニメーション ===== */
 @keyframes fadeIn {
     from {
@@ -814,6 +1090,24 @@ button, input, select, textarea {
 /* アニメーションクラス */
 .fade-in {
     animation: fadeIn 1s ease forwards;
+}
+
+/* スクロールアニメーション */
+.animate-on-scroll {
+    opacity: 1; /* 必ず初期状態で表示されるようにする */
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* JavaScriptが正常に動作している場合のみ適用 */
+.js-animation-ready .animate-on-scroll:not(.visible) {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .slide-up {
@@ -964,6 +1258,182 @@ button, input, select, textarea {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* ===== 施工事例一覧ページ ===== */
+.works-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.works-list .work-card {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.works-list li:last-child {
+    border-bottom: none;
+}
+
+.work-thumb {
+    flex: 0 0 180px;
+    height: 120px;
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.work-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-title {
+    text-align: left !important;
+    font-family: var(--font-family-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.work-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.work-title a:hover {
+    color: var(--color-primary);
+}
+
+.work-excerpt {
+    color: #000000 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+    text-align: left !important;
+}
+
+.work-meta {
+    font-size: 0.75rem;
+    color: #888;
+    margin: 3px 0 6px;
+}
+
+.work-date {
+    margin-right: 10px;
+}
+
+.work-category {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-gray-700);
+    margin-bottom: 1rem;
+}
+
+.work-content .btn-outline,
+.work-content .btn-sm {
+    padding: 12px 24px !important;
+    font-size: 1rem !important;
+    align-self: flex-start !important;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media (max-width: 767px) {
+    .works-list li {
+        flex-direction: column;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .work-thumb {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .work-thumb img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 150px;
+    }
+    
+    .work-content {
+        width: 100%;
+    }
+}
+
+/* ===== パンくずリスト・見出し余白調整 ===== */
+.breadcrumb {
+    margin-bottom: 20px !important;
+    padding: 10px 0 !important;
+}
+
+/* すべてのページのH1見出しを統一 */
+.page-title-section {
+    padding: 30px 0 !important;
+    margin: 0 !important;
+    background-color: #f8f9fa !important;
+    text-align: center !important;
+}
+
+/* ===== ページネーション ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+.pagination .btn {
+    margin: 0 5px;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.pagination .current {
+    background-color: var(--color-primary-dark);
+}
+
+/* ===== お知らせセクション ===== */
+/* デフォルトスタイルに戻すため、カスタムCSSを削除 */
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-thumb {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.news-content h3 {
+    margin-bottom: 8px;
+}
+
+.news-content p {
+    margin-bottom: 10px;
+}
+
 /* ===== スクロールアニメーション ===== */
 .animate-on-scroll {
     opacity: 0;
@@ -1039,6 +1509,14 @@ button, input, select, textarea {
   bottom: 2rem !important;            /* 少し余裕を持たせて調整 */
   left: 50% !important;
   transform: translateX(-50%) !important;
+  transition: all var(--transition-normal);
+}
+
+#works .work-card .btn-primary:hover {
+  transform: translateX(-50%) !important;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* 会社紹介セクションレイアウト */
@@ -1067,17 +1545,7 @@ button, input, select, textarea {
   border-radius: var(--border-radius);
 }
 
-/* ===== スクロールアニメーション ===== */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* ===== スクロールアニメーションは1080行付近に統合済み ===== */
 
 /* ===== サービスページ - 施工実績紹介セクション ===== */
 .service-detail-content {
@@ -1141,24 +1609,43 @@ button, input, select, textarea {
     margin-bottom: 40px;
 }
 
-.company-info-table {
+.company-info-table,
+.work-info-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
 }
 
 .company-info-table th,
-.company-info-table td {
-    padding: 15px;
+.company-info-table td,
+.work-info-table th,
+.work-info-table td {
+    padding: 15px 20px;
     border-bottom: 1px solid var(--color-gray-200);
-    text-align: left;
 }
 
-.company-info-table th {
+.company-info-table th,
+.work-info-table th {
+    background-color: rgba(0, 85, 164, 0.05);
     width: 25%;
-    font-weight: bold;
+    text-align: left;
+    font-weight: 600;
     color: var(--color-primary-dark);
-    background-color: var(--color-gray-100);
+}
+
+.company-info-table tr:hover,
+.work-info-table tr:hover {
+    background-color: rgba(0, 85, 164, 0.02);
+}
+
+.company-info-table tr:last-child th,
+.company-info-table tr:last-child td,
+.work-info-table tr:last-child th,
+.work-info-table tr:last-child td {
+    border-bottom: none;
 }
 
 .company-text {
@@ -1392,11 +1879,11 @@ button, input, select, textarea {
 }
 
 /* CSR活動 */
-.csr-content {
+.works-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 40px;
+    justify-content: center;
+    margin: 0 -15px;
 }
 
 .csr-text {
@@ -2974,10 +3461,7 @@ button, input, select, textarea {
     }
 }
 
-.breadcrumb {
-    padding: 5px 0;
-    margin-bottom: 10px;
-}
+/* 削除：重複したパンくずリストスタイル */
 
 @media (max-width: 576px) {
     :root {
@@ -3003,6 +3487,250 @@ button, input, select, textarea {
 .works-grid img {
     margin: 0 auto !important;
     display: block !important;
+}
+
+/* ===== 施工事例一覧ページ ===== */
+
+.page-title {
+    font-size: 36px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: var(--spacing-sm) auto 0;
+}
+
+/* ===== 施工事例詳細ページ ===== */
+
+/* 見出しデザイン統一 */
+.entry-title {
+    font-size: 36px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.entry-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: var(--spacing-sm) 0 0;
+}
+
+.work-details h2 {
+    font-size: 28px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary-dark);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.work-details h3 {
+    font-size: 22px;
+    color: var(--color-primary);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.related-works h2, .cta-section h2 {
+    font-size: 28px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary-dark);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* 画像サイズ調整 */
+.work-featured-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.process-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.process-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+}
+
+/* 前後ナビゲーションを左右配置に変更 */
+.post-navigation {
+    margin: var(--spacing-xl) 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--color-gray-300);
+    border-bottom: 1px solid var(--color-gray-300);
+}
+
+.nav-previous, .nav-next {
+    flex: 0 0 48%;
+}
+
+.nav-previous a, .nav-next a {
+    display: block;
+    padding: var(--spacing-md);
+    background-color: var(--color-gray-100);
+    border-radius: var(--border-radius);
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    text-align: center;
+    border: 1px solid var(--color-gray-300);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.nav-previous a:hover, .nav-next a:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.nav-previous a::before {
+    content: '\2190';
+    margin-right: var(--spacing-sm);
+}
+
+.nav-next a::after {
+    content: '\2192';
+    margin-left: var(--spacing-sm);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .entry-title {
+        font-size: 28px;
+    }
+    
+    .work-details h2, .related-works h2, .cta-section h2 {
+        font-size: 24px;
+    }
+    
+    .work-details h3 {
+        font-size: 20px;
+    }
+    
+    .process-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-image {
+        max-width: 100%;
+    }
+    
+    .nav-previous a, .nav-next a {
+        padding: var(--spacing-sm);
+        font-size: 14px;
+    }
+}
+
+/* 施工事例リスト */
+.works-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xxl);
+}
+
+.works-list li {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--color-gray-300);
+    padding-bottom: var(--spacing-lg);
+}
+
+.work-thumb {
+    flex: 0 0 120px;
+    margin-right: 20px;
+}
+
+.work-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.work-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    text-align: left;
+}
+
+.work-excerpt {
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+
+/* 削除：重複したページネーションスタイル */
+
+.pagination .current {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    .work-thumb {
+        flex: 0 0 100px;
+        margin-right: 15px;
+    }
+    
+    .work-title {
+        font-size: 1.1rem;
+    }
+    
+    .work-excerpt {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .works-list li {
+        flex-direction: column;
+    }
+    
+    .work-thumb {
+        margin-right: 0;
+        margin-bottom: var(--spacing-sm);
+        width: 100%;
+    }
+    
+    .work-thumb img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* ===== フッターリンク色 ===== */
@@ -3069,6 +3797,7 @@ button, input, select, textarea {
         margin-left: 0 !important;
         margin-top: 20px !important;
     }
+}
     
     .footer-content {
         flex-direction: column;
