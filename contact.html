@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="屋根葺き替え・外壁工事など各種お見積り・ご相談はお気軽にお問い合わせください。">
+    <title>お問い合わせ｜株式会社結城興業</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- WordPress化の際にはここにwp_head()を挿入 -->
+    <!-- <?php wp_head(); ?> -->
+</head>
+<body class="contact-page">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-branding">
+                <a href="index.html" class="logo">
+                    <h1>株式会社結城興業</h1>
+                </a>
+            </div>
+            
+            <nav class="main-navigation">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <span class="hamburger">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </span>
+                    <span class="screen-reader-text">メニュー</span>
+                </button>
+                
+                <ul id="primary-menu" class="menu">
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="about.html">会社情報</a></li>
+                    <li><a href="service.html">サービス</a></li>
+                    <li><a href="archive-works.html">施工事例</a></li>
+                    <li><a href="recruit.html">採用情報</a></li>
+                    <li><a href="news.html">お知らせ</a></li>
+                    <li class="current"><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
+    <main id="primary" class="site-main">
+        <!-- パンくずリスト -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li>お問い合わせ</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ページタイトル -->
+        <section class="page-title-section animate-on-scroll">
+            <div class="container">
+                <h1 class="page-title">お問い合わせ</h1>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォーム -->
+        <section id="contact-form" class="section animate-on-scroll">
+            <div class="container">
+                <div class="contact-intro">
+                    <p>屋根葺き替え・外壁工事など各種お見積り・ご相談はお気軽にお問い合わせください。<br>
+                    担当者より、折り返しご連絡いたします。</p>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form" method="post" action="#">
+                        <div class="form-group">
+                            <label for="name">お名前</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">メールアドレス</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]*" required>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group privacy-policy">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="privacy-agreement" name="privacy-agreement" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label"><a href="#">プライバシーポリシー</a>に同意する</span>
+                            </label>
+                            <span class="error-message">同意が必要です</span>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">送信する</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- /MAIN -->
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-gradient-line"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">株式会社結城興業</h3>
+                    <p class="footer-address">〒123-4567 千葉県千葉市緑区誉田町1-2-3</p>
+                    <p class="footer-contact">TEL: 03-1234-5678 / FAX: 03-1234-5679</p>
+                </div>
+                
+                <div class="footer-sns">
+                    <ul class="sns-links">
+                        <li><a href="#" target="_blank" rel="noopener noreferrer" class="sns-icon twitter">Twitter</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer" class="sns-icon facebook">Facebook</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer" class="sns-icon instagram">Instagram</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer" class="sns-icon youtube">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-nav">
+                <!-- WordPress化の際にはここにwp_nav_menu()を挿入 -->
+                <!-- <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?> -->
+                <ul id="footer-menu" class="menu">
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="about.html">会社情報</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="archive-works.html">施工事例</a></li>
+                    <li><a href="recruit.html">採用情報</a></li>
+                    <li><a href="news.html">お知らせ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 株式会社結城興業 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+    
+    <script src="js/main.js"></script>
+    <!-- WordPress化の際にはここにwp_footer()を挿入 -->
+    <!-- <?php wp_footer(); ?> -->
+</body>
+</html>

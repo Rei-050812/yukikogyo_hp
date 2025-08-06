@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="株式会社結城興業は、高品質なサービスと革新的なソリューションを提供する総合企業です。">
+    <meta name="description" content="株式会社結城興業は、屋根葺き替え・外壁パネル張り・板金工事のプロ集団です。遮熱・防水コーティングで“安心・快適・美観”を実現します。">
     <title>株式会社結城興業</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- WordPress化の際にはここにwp_head()を挿入 -->
-    <!-- <?php wp_head(); ?> -->
 </head>
 <body>
     <!-- HEADER -->
@@ -29,13 +27,12 @@
                     <span class="screen-reader-text">メニュー</span>
                 </button>
                 
-                <!-- WordPress化の際にはここにwp_nav_menu()を挿入 -->
-                <!-- <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?> -->
+
                 <ul id="primary-menu" class="menu">
                     <li class="current"><a href="index.html">トップ</a></li>
                     <li><a href="about.html">会社情報</a></li>
-                    <li><a href="services.html">サービス</a></li>
-                    <li><a href="works.html">施工事例</a></li>
+                    <li><a href="service.html">サービス</a></li>
+                    <li><a href="archive-works.html">施工事例</a></li>
                     <li><a href="recruit.html">採用情報</a></li>
                     <li><a href="news.html">お知らせ</a></li>
                     <li><a href="contact.html">お問い合わせ</a></li>
@@ -50,16 +47,14 @@
         <!-- メインビジュアル -->
         <section class="hero-section animate-on-scroll">
             <div class="hero-video-container">
-                <video class="hero-video" autoplay muted loop playsinline>
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-construction-worker-on-a-roof-9604-large.mp4" type="video/mp4">
-                </video>
+                <video class="hero-video" autoplay loop muted playsinline src="videos/hero/istockphoto-1452292956-640_adpp_is.mp4"></video>
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h2 class="hero-title slide-up" data-text="大切な住まいを、屋根の力で守る。">屋根で、暮らしを守る。</h2>
+                <h1 class="hero-title slide-up" data-text="屋根で、暮らしを守る。">屋根で、暮らしを守る。</h1>
                 <p class="hero-subtitle slide-up">屋根葺き工事・外壁張り工事・建築板金加工のエキスパートが、<br>誠実・安全・長期保証で快適な暮らしを支えます。</p>
                 <div class="hero-buttons">
-                    <a href="services.html" class="btn btn-primary btn-lg slide-left ripple">施工事例を見る</a>
+                    <a href="archive-works.html" class="btn btn-primary btn-lg slide-left ripple">施工事例を見る</a>
                     <a href="contact.html" class="btn btn-primary btn-lg slide-right ripple">お問い合わせ</a>
                 </div>
             </div>
@@ -71,7 +66,7 @@
                 <h2 class="section-title">会社紹介</h2>
                 <div class="about-content">
                     <div class="about-image fade-in">
-                        <img src="https://via.placeholder.com/600x400" alt="株式会社結城興業のオフィス">
+                        <img src="images/team/yukikogyo-roofing-team.jpg" alt="結城興業チーム写真" class="company-thumb">
                     </div>
                     <div class="about-text slide-right">
                         <h3>屋根・外壁・板金のプロフェッショナル<span class="text-primary">結城興業</span></h3>
@@ -84,13 +79,13 @@
         </section>
 
         <!-- サービス概要 -->
-        <section id="services-preview" class="section bg-light animate-on-scroll">
+        <section id="services-preview" class="section animate-on-scroll">
             <div class="container">
                 <h2 class="section-title">サービス</h2>
                 <div class="services-container">
                     <div class="service-item animate-on-scroll">
                         <div class="service-icon">
-                            <img src="https://via.placeholder.com/100" alt="屋根工事アイコン">
+                            <img src="images/icon/icon-roofing.png" alt="屋根葺き工事アイコン">
                         </div>
                         <h3 class="service-title">屋根葺き工事</h3>
                         <p class="service-description">新築からリフォームまで、お客様のご要望や建物に合わせて最適な屋根材を選定し、丁寧かつ高品質に施工します。耐久性と美観を両立し、長く安心して住める屋根を提供します。</p>
@@ -99,7 +94,7 @@
                     
                     <div class="service-item animate-on-scroll">
                         <div class="service-icon">
-                            <img src="https://via.placeholder.com/100" alt="屋根メンテナンスアイコン">
+                            <img src="images/icon/icon-wall-cladding.png" alt="外壁張り工事アイコン">
                         </div>
                         <h3 class="service-title">外壁張り工事</h3>
                         <p class="service-description">建物の外観を美しく仕上げるだけでなく、断熱・防水などの性能も考慮した外壁材を選び、確かな技術で施工します。住まいの快適性と耐久性を高めます。</p>
@@ -108,7 +103,7 @@
                     
                     <div class="service-item animate-on-scroll">
                         <div class="service-icon">
-                            <img src="https://via.placeholder.com/100" alt="屋根診断アイコン">
+                            <img src="images/icon/icon-sheet-metal-fabrication.png" alt="建築板金加工アイコン">
                         </div>
                         <h3 class="service-title">建築板金加工</h3>
                         <p class="service-description">雨樋や水切り、笠木などの板金部材をオーダーメイドで加工・取り付け。建物の防水性・耐候性を高めるとともに、細部までこだわった仕上がりを実現します。</p>
@@ -124,60 +119,60 @@
                 <h2 class="section-title">施工事例</h2>
                 <div class="works-container">
                     <div class="work-card service-item animate-on-scroll">
-                        <img src="https://via.placeholder.com/400x300" alt="施工事例1" class="work-image">
+                        <img src="images/works/yukikogyo_project01.jpg" alt="施工事例1 東京都／オフィスビル" class="work-thumb">
                         <div class="work-overlay">
-                            <h3 class="work-title">東京オフィスビル</h3>
+                            <h3 class="work-title">東京都／オフィスビル</h3>
                             <p class="work-category">都心のオフィスビルにて、屋根葺き替えと外壁パネル張りを一貫施工し、特殊コーティングで遮熱・防水性を強化いたしました。</p>
 
-                            <a href="works.html#project1" class="btn btn-sm btn-primary">詳細を見る</a>
+                            <a href="single-works.html?project=1" class="btn btn-sm btn-outline">詳細を見る</a>
                         </div>
                     </div>
                     <div class="work-card service-item animate-on-scroll">
-                        <img src="https://via.placeholder.com/400x300" alt="施工事例2" class="work-image">
+                        <img src="images/works/yukikogyo_project02.jpg" alt="施工事例2 神奈川県／マンション" class="work-thumb">
                         <div class="work-overlay">
-                            <h3 class="work-title">横浜マンション</h3>
-                            <p class="work-category">築20年超のマンションで屋上防水改修および金属屋根材新設、断熱サイディング張りを施工し、耐久性を向上いたしました。</p>
+                            <h3 class="work-title">神奈川県／マンション</h3>
+                            <p class="work-category">築20年マンションの大規模修繕工事。屋上防水と外壁タイル補修を実施し、美観と機能性を回復させました。</p>
 
-                            <a href="works.html#project2" class="btn btn-sm btn-primary">詳細を見る</a>
+                            <a href="single-works.html?project=2" class="btn btn-sm btn-outline">詳細を見る</a>
                         </div>
                     </div>
                     <div class="work-card service-item animate-on-scroll">
-                        <img src="https://via.placeholder.com/400x300" alt="施工事例3" class="work-image">
+                        <img src="images/works/yukikogyo_project03.jpg" alt="施工事例3 千葉県／公共施設" class="work-thumb">
                         <div class="work-overlay">
-                            <h3 class="work-title">大阪商業施設</h3>
-                            <p class="work-category">商業施設の外装リニューアルで軽量アルミ屋根と耐候性パネル外壁を施工し、段階施工により営業継続を支援いたしました。</p>
+                            <h3 class="work-title">千葉県／公共施設</h3>
+                            <p class="work-category">公共施設の屋根改修工事。台風対策として強化金属屋根材を使用し、耐久性と安全性を高めました。</p>
 
-                            <a href="works.html#project3" class="btn btn-sm btn-primary">詳細を見る</a>
+                            <a href="single-works.html?project=3" class="btn btn-sm btn-outline">詳細を見る</a>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="works.html" class="btn btn-outline">すべての事例を見る</a>
+                    <a href="archive-works.html" class="btn btn-outline">すべての事例を見る</a>
                 </div>
             </div>
         </section>
 
         <!-- ニュース -->
-        <section id="news-preview" class="section bg-light animate-on-scroll news-section">
+        <section id="news-preview" class="section animate-on-scroll news-section">
             <div class="container">
                 <h2 class="section-title">お知らせ</h2>
                 <ul class="news-list">
                     <li class="news-item">
-                        <img src="https://via.placeholder.com/300x200" alt="ニュース1" class="news-thumb">
+                        <img src="images/eyecatch/yukikogyo-default-eyecatch.jpg" alt="お知らせサムネイル" class="news-thumb">
                         <div class="news-content">
                             <h3><a href="news-detail1.html" class="news-link">新しいオフィスビルの完成について</a></h3>
                             <p><a href="news-detail1.html" class="news-link">東京都心に当社の新しいランドマークとなるオフィスビルが完成しました。最新の環境技術を導入し...</a></p>
                         </div>
                     </li>
                     <li class="news-item">
-                        <img src="https://via.placeholder.com/300x200" alt="ニュース2" class="news-thumb">
+                        <img src="images/eyecatch/yukikogyo-default-eyecatch.jpg" alt="お知らせサムネイル" class="news-thumb">
                         <div class="news-content">
                             <h3><a href="news-detail2.html" class="news-link">サステナビリティへの取り組み強化</a></h3>
                             <p><a href="news-detail2.html" class="news-link">当社は環境負荷低減のため、すべてのプロジェクトにおいてサステナブルな材料と工法を採用する方針を...</a></p>
                         </div>
                     </li>
                     <li class="news-item">
-                        <img src="https://via.placeholder.com/300x200" alt="ニュース3" class="news-thumb">
+                        <img src="images/eyecatch/yukikogyo-default-eyecatch.jpg" alt="お知らせサムネイル" class="news-thumb">
                         <div class="news-content">
                             <h3><a href="news-detail3.html" class="news-link">新卒採用情報を公開しました</a></h3>
                             <p><a href="news-detail3.html" class="news-link">2026年度の新卒採用情報を公開しました。当社では意欲的な人材を広く募集しています。詳細は採用ページを...</a></p>
@@ -197,7 +192,7 @@
                 <div class="contact-content text-center">
                     <div class="contact-text">
                         <p class="mb-4">屋根工事やメンテナンスについてのご質問、お見積もりのご依頼など、<br>お気軽にお問い合わせください。</p>
-                        <a href="contact.html" class="btn btn-primary btn-lg ripple">無料お見積り依頼</a>
+                        <a href="contact.html" class="btn btn-primary btn-lg ripple">ご相談・お問い合わせはこちら</a>
                     </div>
                     <div class="contact-info mt-5">
                         <div class="contact-item">
@@ -244,15 +239,14 @@
                 <ul id="footer-menu" class="menu">
                     <li><a href="index.html">トップ</a></li>
                     <li><a href="about.html">会社情報</a></li>
-                    <li><a href="services.html">サービス</a></li>
-                    <li><a href="works.html">施工事例</a></li>
+                    <li><a href="service.html">サービス</a></li>
+                    <li><a href="archive-works.html">施工事例</a></li>
                     <li><a href="recruit.html">採用情報</a></li>
                     <li><a href="news.html">お知らせ</a></li>
                     <li><a href="contact.html">お問い合わせ</a></li>
                     <li><a href="#">プライバシーポリシー</a></li>
                 </ul>
             </div>
-            
             <div class="copyright">
                 <p>&copy; 2025 株式会社結城興業 All Rights Reserved.</p>
             </div>
