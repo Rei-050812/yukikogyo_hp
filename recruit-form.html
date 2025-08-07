@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="株式会社結城興業の採用応募フォーム。施工管理・営業・事務スタッフなど各職種への応募はこちらから。">
+    <title>採用応募フォーム｜株式会社結城興業</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- WordPress化の際にはここにwp_head()を挿入 -->
+    <!-- <?php wp_head(); ?> -->
+</head>
+<body class="recruit-form-page">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-branding">
+                <a href="index.html" class="logo">
+                    <h1>株式会社結城興業</h1>
+                </a>
+            </div>
+            
+            <nav class="main-navigation">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <span class="hamburger">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </span>
+                    <span class="screen-reader-text">メニュー</span>
+                </button>
+                
+                <ul id="primary-menu" class="menu">
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="about.html">会社情報</a></li>
+                    <li><a href="service.html">サービス</a></li>
+                    <li><a href="archive-works.html">施工事例</a></li>
+                    <li><a href="archive-news.html">お知らせ</a></li>
+                    <li class="current"><a href="recruit.html">採用情報</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
+    <main id="primary" class="site-main">
+        <!-- パンくずリスト -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="recruit.html">採用情報</a></li>
+                    <li>採用応募フォーム</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ページタイトル -->
+        <section class="page-title-section ">
+            <div class="container">
+                <h1 class="page-title">採用応募フォーム</h1>
+            </div>
+        </section>
+
+        <!-- 採用応募フォーム -->
+        <section id="recruit-form" class="section ">
+            <div class="container">
+                <div class="contact-intro">
+                    <p>株式会社結城興業への応募をご検討いただき、ありがとうございます。<br>
+                    下記フォームに必要事項をご入力の上、送信してください。担当者より、折り返しご連絡いたします。</p>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="recruit-form" class="contact-form" method="post" action="#">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="kana">フリガナ <span class="required">*</span></label>
+                            <input type="text" id="kana" name="kana" required>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">電話番号 <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]*" required>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">年齢</label>
+                            <input type="number" id="age" name="age" min="18" max="70">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">住所 <span class="required">*</span></label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="position">希望職種 <span class="required">*</span></label>
+                            <select id="position" name="position" required>
+                                <option value="">選択してください</option>
+                                <option value="construction-manager">施工管理</option>
+                                <option value="sales">営業スタッフ</option>
+                                <option value="office">事務スタッフ</option>
+                                <option value="craftsman">建築板金技能士</option>
+                                <option value="other">その他</option>
+                            </select>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">関連業界での経験年数</label>
+                            <select id="experience" name="experience">
+                                <option value="">選択してください</option>
+                                <option value="none">未経験</option>
+                                <option value="1-3">1〜3年</option>
+                                <option value="4-7">4〜7年</option>
+                                <option value="8-15">8〜15年</option>
+                                <option value="16+">16年以上</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="qualifications">保有資格</label>
+                            <textarea id="qualifications" name="qualifications" rows="3" placeholder="例：普通自動車免許、施工管理技士、建築板金技能士など"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="motivation">志望動機 <span class="required">*</span></label>
+                            <textarea id="motivation" name="motivation" rows="6" required placeholder="当社を志望される理由や、入社後に取り組みたいことなどをお聞かせください。"></textarea>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="self-pr">自己PR</label>
+                            <textarea id="self-pr" name="self-pr" rows="6" placeholder="これまでの経験や強み、アピールポイントなどをお聞かせください。"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="start-date">入社可能時期 <span class="required">*</span></label>
+                            <select id="start-date" name="start-date" required>
+                                <option value="">選択してください</option>
+                                <option value="immediately">すぐに可能</option>
+                                <option value="1month">1ヶ月後</option>
+                                <option value="2months">2ヶ月後</option>
+                                <option value="3months">3ヶ月後</option>
+                                <option value="negotiable">要相談</option>
+                            </select>
+                            <span class="error-message">必須項目です</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additional-info">その他・特記事項</label>
+                            <textarea id="additional-info" name="additional-info" rows="4" placeholder="その他、お伝えしたいことがございましたらご記入ください。"></textarea>
+                        </div>
+                        
+                        <div class="form-group privacy-policy">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="privacy-agreement" name="privacy-agreement" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label"><a href="#">プライバシーポリシー</a>に同意する</span>
+                            </label>
+                            <span class="error-message">同意が必要です</span>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">応募する</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="recruit-note">
+                    <h3>応募に関するご注意</h3>
+                    <ul>
+                        <li>応募書類は返却いたしません。予めご了承ください。</li>
+                        <li>選考結果は、合否に関わらず1週間以内にご連絡いたします。</li>
+                        <li>応募いただいた個人情報は、採用選考の目的以外には使用いたしません。</li>
+                        <li>ご不明な点がございましたら、お気軽にお問い合わせください。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- /MAIN -->
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-gradient-line"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">株式会社結城興業</h3>
+                    <p class="footer-address">〒123-4567 千葉県千葉市緑区誉田町1-2-3</p>
+                    <p class="footer-contact">TEL: 03-1234-5678 / FAX: 03-1234-5679</p>
+                </div>
+            </div>
+            
+            <div class="footer-nav">
+                <ul id="footer-menu" class="menu">
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="about.html">会社情報</a></li>
+                    <li><a href="service.html">サービス</a></li>
+                    <li><a href="archive-works.html">施工事例</a></li>
+                    <li><a href="archive-news.html">お知らせ</a></li>
+                    <li><a href="recruit.html">採用情報</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 株式会社結城興業 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+    
+    <script src="js/main.js"></script>
+    <!-- WordPress化の際にはここにwp_footer()を挿入 -->
+    <!-- <?php wp_footer(); ?> -->
+</body>
+</html>
