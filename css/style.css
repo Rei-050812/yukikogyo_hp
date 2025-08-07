@@ -2446,6 +2446,421 @@ main .section-title::after {
     color: var(--color-white);
 }
 
+/* ===== 採用ページ専用スタイル ===== */
+/* 1. 全コンテンツ中央寄せ（フッターは除く） */
+.page-recruit .container {
+    text-align: center;
+}
+
+/* フッターは他のページと同じ左寄せ */
+.page-recruit .site-footer .container {
+    text-align: left;
+}
+
+.page-recruit .footer-info {
+    text-align: left;
+}
+
+.page-recruit .section-title,
+.page-recruit .hero-title,
+.page-recruit .hero-subtitle,
+.page-recruit .requirement-title,
+.page-recruit .method-title,
+.page-recruit .process-title,
+.page-recruit .links-title {
+    text-align: center;
+}
+
+.page-recruit .requirements-content,
+.page-recruit .benefits-content,
+.page-recruit .entry-methods {
+    text-align: center;
+}
+
+.page-recruit .requirement-list,
+.page-recruit .benefits-list {
+    display: inline-block;
+    text-align: left;
+    max-width: 600px;
+}
+
+/* 2. ヒーローセクション調整 - TOPページと同じ構造 */
+.recruit-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.recruit-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.recruit-hero .hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recruit-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.recruit-hero .hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.recruit-hero .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.recruit-hero .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* 代表からのメッセージ - 左画像、右テキスト */
+.message-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    text-align: left;
+}
+
+.message-image {
+    flex: 0 0 200px;
+}
+
+.message-image .president-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.message-text {
+    flex: 1;
+}
+
+.message-text .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.message-author {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 募集職種一覧テーブル - 左寄せ + 職種名色付け */
+.page-recruit .company-info-table {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.page-recruit .company-info-table th,
+.page-recruit .company-info-table td {
+    text-align: left;
+}
+
+/* 職種名をh3見出しに変更するため、色付けスタイルを削除 */
+/* 職種名h3見出しのスタイル */
+.job-title {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #007bff;
+    text-align: left;
+}
+
+/* 応募要件 - 横並び + デザイン強化（背景白色） */
+.requirements-content {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    text-align: left;
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.requirement-item {
+    flex: 1;
+    max-width: 400px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.requirement-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 12px 12px 0 0;
+}
+
+.requirement-title {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.requirement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirement-list li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    line-height: 1.6;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.requirement-list li:last-child {
+    border-bottom: none;
+}
+
+.requirement-list li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* 応募方法セクション - ボタンとメール・電話の余白調整 */
+.entry-method {
+    margin-bottom: 3rem;
+}
+
+.entry-method:last-child {
+    margin-bottom: 0;
+}
+
+.entry-method .btn-large {
+    margin-bottom: 2rem;
+}
+
+/* 選考プロセスのデザイン強化 - 背景白色 */
+.selection-process {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.process-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.step-content h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.step-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* 関連ページセクション - 外枠なし */
+.internal-links {
+    background: transparent;
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.links-title {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.links-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+.link-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.link-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.link-card h4 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.link-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .link-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .process-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .recruit-hero {
+        min-height: 50vh;
+    }
+    
+    .recruit-hero .hero-title {
+        font-size: 2rem;
+    }
+    
+    .recruit-hero .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .message-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .message-image {
+        flex: none;
+        align-self: center;
+    }
+    
+    .message-text .section-title {
+        text-align: center;
+    }
+    
+    .requirements-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .page-recruit .company-info-table {
+        margin-bottom: 1rem;
+    }
+}
+
 /* ===== サービスページスタイル ===== */
 /* 共通セクションスタイル */
 .section {
